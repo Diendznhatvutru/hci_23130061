@@ -3,26 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>About Page</title>
     <link rel="stylesheet" href="main.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <!-- Thanh điều hướng -->
+    <!-- Navigation Bar -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li>
+        <li id="about-link-container">
+          <!-- Ensure this is the correct ID -->
           <a href="#" id="about-link">About</a>
+          <!-- CV Popup -->
           <div id="cv-popup" class="hidden">
-            <a href="cv.pdf" target="_blank" id="cv-link">Xem CV của tôi</a>
+            <a href="cv.pdf" target="_blank" id="cv-link">Download CV</a>
           </div>
         </li>
-        <li><a href="lab.html">Labs</a></li>
+        <li><a href="labs.html">Labs</a></li>
       </ul>
     </nav>
 
-    <!-- Nội dung trang -->
-    <h1>Chào mừng đến trang Home</h1>
+    <!-- Page Content -->
+    <h1>Chào mừng đến trang About</h1>
   </body>
 </html>
