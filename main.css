@@ -1,0 +1,51 @@
+/* main.css */
+
+body {
+  margin: 0; /* Bỏ khoảng cách mặc định */
+  font-family: Arial, sans-serif; /* Chọn phông chữ */
+}
+
+nav {
+  background-color: #24292e; /* Màu nền giống GitHub */
+  color: white; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách cho thanh điều hướng */
+}
+
+nav ul {
+  list-style-type: none; /* Bỏ dấu gạch đầu dòng */
+  padding: 0; /* Bỏ khoảng cách bên trong */
+  margin: 0; /* Bỏ khoảng cách bên ngoài */
+  display: flex; /* Căn chỉnh theo chiều ngang */
+}
+
+nav li {
+  margin-right: 20px; /* Khoảng cách giữa các mục */
+}
+
+nav a {
+  color: white; /* Màu chữ */
+  text-decoration: none; /* Bỏ gạch chân */
+  padding: 8px 12px; /* Thêm padding cho liên kết */
+  border-radius: 4px; /* Bo góc */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+nav a:hover {
+  background-color: #3b4045; /* Màu nền khi hover */
+}
+
+h1 {
+  margin: 20px; /* Khoảng cách cho tiêu đề */
+}
+#cv-popup {
+  position: absolute;
+  background-color: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
+  display: none; /* Ẩn theo mặc định */
+}
+
+#about-link:hover + #cv-popup {
+  display: block; /* Hiện khi di chuột vào mục About */
+}
