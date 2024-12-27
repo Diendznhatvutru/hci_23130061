@@ -1,0 +1,226 @@
+<html class="no-js" lang="en">
+  <head>
+   
+    <meta charset="utf-8" />
+    <title>Ethos</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/vendor.css" />
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <style>
+    main a {
+      display: block;
+      text-align: center;
+      padding: 1rem 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      background: linear-gradient(135deg, #007bff, #6a11cb);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    
+    main a:hover {
+      background: linear-gradient(135deg, #6a11cb, #007bff);
+      transform: scale(1.05);
+    }
+    
+    main a:active {
+      transform: scale(0.95);
+    }
+    #lab-content {
+    background: #1e1e2e;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem;
+    display: none;
+    color: #ffffff;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1.2rem;
+  }
+
+  button {
+    background-color: #f9861a;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #544d9d;
+  }
+
+  .hidden {
+    display: none;
+  }
+  header.s-header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+background: #0b0a15;
+padding: 1rem;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header.s-header .header-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+main {
+margin-top: 80px; /* Khoảng trống đủ lớn để không bị trùng với header */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 1.5rem;
+padding: 2rem;}
+</style>
+  <body id="top">
+    </div>
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Homepage" />
+        </a>
+      </div>
+
+      <div class="header-content">
+        <nav class="row header-nav-wrap">
+          <ul class="header-nav">
+            <a href="index.html">Home</a>
+            <li><a href="Labs.html" class="active" title="Labs">Labs</a></li>
+            <li><a href="Result.html" title="Result">Result</a></li>
+          </ul>
+          
+        </nav>
+    
+      </div>
+
+      <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+    </header>
+    <main>
+      <a href="#" onclick="loadLab('lab1')">Lab 1</a>
+      <a href="https://diendznhatvutru.github.io/ts/" onclick="loadLab('lab2')"
+        >Lab 2</a
+      >
+      <a
+        href="https://diendznhatvutru.github.io/lab3/"
+        onclick="loadLab('lab3')"
+        >Lab 3</a
+      >
+      <a
+        href="https://diendznhatvutru.github.io/lab4/"
+        onclick="loadLab('lab4')"
+        >Lab 4</a
+      >
+      <a
+        href="https://diendznhatvutru.github.io/lab5/"
+        onclick="loadLab('lab5')"
+        >Lab 5</a
+      >
+    </main>
+    <div id="lab-content"></div>
+   
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function loadLab(labName) {
+        const labContent = document.getElementById("lab-content");
+        if (labName === "lab1") {
+          labContent.innerHTML = `
+            <h1>Lab 1: Create or Edit User</h1>
+            <form id="user-form">
+              <div class="form-group">
+                <label for="username">Username <span>*</span></label>
+                <input type="text" id="username" name="username" maxlength="255" placeholder="Enter your username" required />
+              </div>
+              <div class="form-group">
+                <label for="password">Password <span>*</span></label>
+                <input type="password" id="password" name="password" maxlength="255" placeholder="Enter your password" required />
+                <input type="checkbox" id="show-password" /> Show Password
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" name="email" maxlength="255" placeholder="Enter your email" required />
+              </div>
+              <div class="form-group">
+                <label for="role">Role <span>*</span></label>
+                <select id="role" name="role" required>
+                  <option value="">Select a role</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="submit">Create Account</button>
+                <button type="button" onclick="hideLab()">Cancel</button>
+              </div>
+            </form>`;
+          labContent.style.display = "block";
+        }
+      }
+      window.loadLab = loadLab;
+      window.hideLab = function () {
+        document.getElementById("lab-content").style.display = "none";
+      };
+    });
+  </script>
+<script>document.querySelectorAll('.header-nav a').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    if (link.href.includes('#')) {
+      e.preventDefault(); // Ngăn hành động chỉ khi link có anchor #
+    }
+  });
+});
+</script>
+
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>    </body>
+</html>
